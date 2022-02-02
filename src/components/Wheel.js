@@ -44,7 +44,7 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        width: '100%',
+        width: '90%',
         margin: '30px auto',
         alignItems: 'center',
         overflow: 'hidden'
@@ -55,7 +55,7 @@ const useStyles = makeStyles({
 });
 
 
-const goods = [
+const item = [
     {
         id: '10',
         image: './money/10.jpeg',
@@ -82,9 +82,14 @@ const goods = [
         text: '50.000đ',
     },
     {
-        id: '100',
-        image: './money/100.jpeg',
-        text: '100.000đ',
+        id: '50',
+        image: './money/50.jpeg',
+        text: '50.000đ',
+    },
+    {
+        id: 'again',
+        image: './icons/restart.png',
+        text: 'Quay lại',
     },
     {
         id: 'again',
@@ -96,15 +101,36 @@ const goods = [
         image: './icons/lol.jpeg',
         text: 'Chúc may mắn lần sau',
     },
-];
-
-const vip = [
+    {
+        id: '100',
+        image: './money/100.jpeg',
+        text: '100.000đ',
+    },
+    {
+        id: '100',
+        image: './money/100.jpeg',
+        text: '100.000đ',
+    },
     {
         id: '200',
         image: './money/200.jpeg',
         text: '200.000đ',
     },
+];
+
+const other = [
+    {
+        id: 'again',
+        image: './icons/restart.png',
+        text: 'Quay lại',
+    },
+    {
+        id: 'unlucky',
+        image: './icons/lol.jpeg',
+        text: 'Chúc may mắn lần sau',
+    },
 ]
+
 const pro = [
     {
         id: '500',
@@ -121,7 +147,7 @@ const reproductionArray = (array = [], length = 0) => [
         .map(() => array[Math.floor(Math.random() * array.length)]),
 ];
 
-const _ = require("lodash"); 
+const _ = require("lodash");
 function shuffle(array) {
     let shuffled_array = _.shuffle(array);
     return shuffled_array
@@ -138,29 +164,23 @@ function shuffle(array) {
 // ];
 
 const getPrizes = () => [
-    ...goods,
-    ...goods,
-    ...goods,
-    ...vip,
-    ...goods,
-    ...goods,
-    ...pro,
-    ...goods,
-    ...vip,
-    ...goods,
+    ...item,
+    ...item,
+    ...item,
+    ...item,
 ];
 
 
 let prizes = shuffle(getPrizes());
-//const prizes = getPrizes();
+// let prizes = getPrizes();
 
 function getRandomInt(min, max) {
-    let random = Math.floor(Math.random() * (max - min) + min);
-    console.log(random);
-    return random;
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }
 
-const getRandomGoodIndex = () => getRandomInt(27, prizes.length - 1);
+const getRandomGoodIndex = () => getRandomInt(17, prizes.length - 1);
 
 function WheelSpin() {
     const classes = useStyles();
@@ -178,6 +198,7 @@ function WheelSpin() {
         setSpinning(true);
         setText(prizes[newPrizeNumber].text);
         console.log(prizes[newPrizeNumber]);
+        console.log(newPrizeNumber);
     };
 
     const handlePrizeDefined = useCallback(() => {
@@ -194,7 +215,6 @@ function WheelSpin() {
     };
 
     useEffect(() => {
-        console.log(prizes.length);
         open && confetti({
             particleCount: 200,
             spread: 70,
@@ -209,9 +229,9 @@ function WheelSpin() {
                     prizes={prizes}
                     prizeIndex={prizeIndex}
                     start={start}
-                    spinningTime={6}
+                    spinningTime={8}
                     onPrizeDefined={handlePrizeDefined}
-                    prizeWidth={200}
+                    prizeWidth={210}
                 />
             </div>
             {

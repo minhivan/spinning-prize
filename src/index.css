@@ -100,10 +100,33 @@ header {
 
 .roulette-pro-prizes::after {
   left: 50% !important;
-  width: 4px !important;
+  width: 5px !important;
 }
 
+.roulette-pro-prizes{
+  width: 100% !important;
+}
 
+.roulette-pro-prizes-container{
+  max-width: 100% !important;
+}
+
+.roulette-pro-prize-item{
+  /* margin: 0 5px !important; */
+  padding: 0 2px !important;
+}
+.roulette-pro-prize-item-wrapper{
+  /* background: radial-gradient(farthest-corner, #ad2f35 0, #13161a 100%) !important;  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* min-height: 190px !important; */
+  border: none !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+.roulette-pro-effects::after, .roulette-pro-effects::before, .roulette-pro-prize-item-wrapper::before{
+  background: none !important;
+}
+
+/* background-image: radial-gradient( circle 590px at 8.2% 13.8%,  rgba(18,35,60,1) 0%, #bbb 90% ); */
 h2 {
   font-family:  'Satisfy', cursive;
   margin: 0;

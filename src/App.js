@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <CssBaseline />
-      <Snowfall />
+      {/* <Snowfall /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="play" element={<Play />} />

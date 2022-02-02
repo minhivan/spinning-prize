@@ -3,9 +3,6 @@
 ![img.png](img.png)
 ### Spinning
 ![img_1.png](img_1.png)
-### Link Demo
-[https://reactjs-lucky-charm.web.app/](https://reactjs-lucky-charm.web.app/)
-
 ## Available Scripts
 
 In the project directory, you can run:

@@ -22,7 +22,6 @@ function Home() {
     const classes = useStyles();
     return (
         <div className='background'>
-            
             <Box className='button-holder'>
                 <Button href='/play' className={classes.root} variant="contained">NHẤN ĐỂ QUAY !</Button>
             </Box>
