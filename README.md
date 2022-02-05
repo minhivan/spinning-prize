@@ -1,8 +1,12 @@
 # Spinning Prize Wheel
-### Demo
+### Layout
 ![img.png](img.png)
 ### Spinning
 ![img_1.png](img_1.png)
+### Link demo 
+Open [https://reactjs-lucky-charm.web.app/play](https://reactjs-lucky-charm.web.app/play) to view it in your browser.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
