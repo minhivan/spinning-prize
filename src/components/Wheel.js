@@ -82,31 +82,6 @@ const item = [
         text: '50.000đ',
     },
     {
-        id: '50',
-        image: './money/50.jpeg',
-        text: '50.000đ',
-    },
-    {
-        id: 'again',
-        image: './icons/restart.png',
-        text: 'Quay lại',
-    },
-    {
-        id: 'again',
-        image: './icons/restart.png',
-        text: 'Quay lại',
-    },
-    {
-        id: 'unlucky',
-        image: './icons/lol.jpeg',
-        text: 'Chúc may mắn lần sau',
-    },
-    {
-        id: '100',
-        image: './money/100.jpeg',
-        text: '100.000đ',
-    },
-    {
         id: '100',
         image: './money/100.jpeg',
         text: '100.000đ',
@@ -168,6 +143,9 @@ const getPrizes = () => [
     ...item,
     ...item,
     ...item,
+    ...item,
+    ...other,
+    ...item
 ];
 
 
